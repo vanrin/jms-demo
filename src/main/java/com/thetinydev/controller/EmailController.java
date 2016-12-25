@@ -18,7 +18,7 @@ public class EmailController {
 	@Autowired
 	private ApplicationContext applicationContext;
 	
-	@GetMapping("/{sendingTime}")
+	@GetMapping("jms/{sendingTime}")
 	public void sendMail(@PathVariable int sendingTime) {
 		JmsTemplate jmsTemplate = applicationContext.getBean(JmsTemplate.class);
 		
